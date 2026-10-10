@@ -1,0 +1,119 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.62in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.25em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+\definecolor{accent}{HTML}{17365D}
+\definecolor{muted}{HTML}{555555}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{-4pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+
+\newcommand{\cvline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & \textcolor{muted}{#2}
+  \end{tabularx}\vspace{-2pt}
+}
+
+\newcommand{\cvsubline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textit{#1} & \textit{\textcolor{muted}{#2}}
+  \end{tabularx}\vspace{-4pt}
+}
+
+\newcommand{\skillrow}[2]{%
+  \textbf{#1:} #2\\[-1pt]
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{22}{25}\selectfont\bfseries YOUR NAME}\\[3pt]
+  \textcolor{muted}{Singapore \enspace$\vert$\enspace
+  +65 8XXX XXXX \enspace$\vert$\enspace
+  \href{mailto:your.name@email.com}{your.name@email.com}}\\[2pt]
+  \href{https://www.linkedin.com/in/your-profile}{linkedin.com/in/your-profile}
+  \enspace$\vert$\enspace
+  \href{https://github.com/your-username}{github.com/your-username}
+  \enspace$\vert$\enspace
+  \href{https://your-portfolio.com}{your-portfolio.com}
+\end{center}
+
+\vspace{-5pt}
+
+\section{Profile}
+Results-oriented [target role] with experience in [specialism or industry]. Skilled in
+[two or three strengths], with a track record of [measurable outcome]. Seeking to
+contribute [relevant value] in a [type of team or organisation] environment.
+
+\section{Education}
+\cvline{National University of Singapore}{Singapore}
+\cvsubline{Master/Bachelor of [Degree], [Major]}{Aug 20XX -- May 20XX}
+\begin{itemize}
+  \item GPA: X.XX/5.00; relevant coursework: Course A, Course B, Course C.
+  \item Awards: [Scholarship, Dean's List, competition result, or other distinction].
+\end{itemize}
+
+\section{Experience}
+\cvline{Company Name}{Singapore}
+\cvsubline{Job Title / Internship Title}{May 20XX -- Aug 20XX}
+\begin{itemize}
+  \item Built or improved [system/process] using [tools], reducing [time/cost/errors] by X\%.
+  \item Analysed [data or problem] and presented recommendations that led to [measurable result].
+  \item Collaborated with [teams/stakeholders] to deliver [output] for [number] users or clients.
+\end{itemize}
+
+\cvline{Organisation or Research Group}{City, Country}
+\cvsubline{Role Title}{Jan 20XX -- Apr 20XX}
+\begin{itemize}
+  \item Designed and implemented [feature/method] with [technology], achieving [metric].
+  \item Automated [workflow] and saved approximately [number] hours per [week/month].
+\end{itemize}
+
+\section{Selected Projects}
+\cvline{Project Name \textnormal{\textbar\ Technology A, Technology B}}{20XX}
+\begin{itemize}
+  \item Developed [what the project does] to address [problem]; reached [result or scale].
+  \item Implemented [notable technical feature] and improved [metric] by X\%.
+\end{itemize}
+
+\cvline{Second Project \textnormal{\textbar\ Technology C, Technology D}}{20XX}
+\begin{itemize}
+  \item Created [product/model/analysis] and validated it using [method or dataset].
+  \item Documented and published the work at
+  \href{https://github.com/your-username/project}{github.com/your-username/project}.
+\end{itemize}
+
+\section{Skills}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+  \skillrow{Programming}{Python, Java, SQL, JavaScript, Git}
+  \skillrow{Tools}{Docker, Linux, AWS, Tableau, Microsoft Office}
+  \skillrow{Languages}{English (fluent), Mandarin Chinese (native)}
+\end{tabularx}
+
+\section{Leadership \& Activities}
+\cvline{Student Organisation / Volunteer Group}{20XX -- Present}
+\cvsubline{Position}{Singapore}
+\begin{itemize}
+  \item Led [number]-member team to organise [initiative] for [number] participants.
+  \item Managed [budget/schedule/stakeholders] and achieved [specific outcome].
+\end{itemize}
+
+\end{document}
