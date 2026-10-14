@@ -39,10 +39,14 @@
   \ifnum\cvpages>1\PackageError{cv}{Resume exceeds one page}{Shorten the content or adjust spacing.}\fi}
 \begin{document}
 \fontsize{10.5}{13.2}\selectfont
-\noindent\begin{minipage}[c]{0.83\textwidth}
+% Equal side columns keep the name and contact line centered on the page.
+\noindent\begin{minipage}[c]{0.14\textwidth}
+  \rule{0pt}{2.20cm}
+\end{minipage}%
+\begin{minipage}[c]{0.72\textwidth}
   \name{李昕潼}
   \basicInfo{\phone{+65 86974095}\quad\textperiodcentered\quad\email{xintong.li@u.nus.edu}}
-\end{minipage}\hfill%
+\end{minipage}%
 \begin{minipage}[c]{0.14\textwidth}
   \raggedleft
   \IfFileExists{assets/resume_photo.png}{%
@@ -52,7 +56,7 @@
 \section{\faGraduationCap\ 教育背景}
 \datedsubsection{新加坡国立大学\quad 计算机硕士（MComp）}{2026/08 -- 至今}
 \datedsubsection{北京邮电大学\quad 通信工程本科}{2022/09 -- 2026/06}
-本科就读期间，专业排名前5均分 \textbf{90.47}；国家奖学金；北京市优秀毕业生。
+本科期间均分 \textbf{90.47}，专业排名\textbf{前 5\%}；获\textbf{国家奖学金}，获评\textbf{北京市优秀毕业生}。
 \section{\faUsers\ 实习经历}
 \datedsubsection{快手\quad AI Agent 开发工程师}{2026/05 -- 2026/07}
 \tech{TypeScript / LangGraph / OpenCode / Tool Calling / Multi-Agent / React / Node.js}
