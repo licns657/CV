@@ -3,7 +3,7 @@
 % Adapted from billryan/resume (MIT); see TEMPLATE-LICENSE.
 % The template definitions are embedded to support the standalone editor.
 \documentclass[10pt,a4paper]{article}
-\usepackage[top=1.20cm,bottom=1.20cm,left=1.40cm,right=1.40cm,nohead]{geometry}
+\usepackage[top=1.00cm,bottom=1.00cm,left=1.40cm,right=1.40cm,nohead]{geometry}
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage{graphicx}
@@ -23,7 +23,7 @@
 \setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
 % billryan/resume section and dated-subsection layout, tuned for one page.
 \titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{6pt}{4pt}
+\titlespacing*{\section}{0pt}{5pt}{3pt}
 \titleformat{\subsection}{\normalsize\raggedright}{}{0em}{}
 \titlespacing*{\subsection}{0pt}{3pt}{1pt}
 \newcommand{\datedsubsection}[2]{\subsection{\textbf{#1}\hfill\normalfont\small #2}}
@@ -33,12 +33,12 @@
 \newcommand{\basicInfo}[1]{\centerline{\sffamily\fontsize{10.5}{13}\selectfont #1}}
 \newcommand{\tech}[1]{{\fontsize{9.3}{12}\selectfont\itshape #1\par}\vspace{1pt}}
 \setlist[itemize]{label=\textbullet,leftmargin=1.25em,labelsep=0.45em,
-  itemsep=1.5pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+  itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
 \newcount\cvpages
 \AtBeginShipout{\global\advance\cvpages by 1
   \ifnum\cvpages>1\PackageError{cv}{Resume exceeds one page}{Shorten the content or adjust spacing.}\fi}
 \begin{document}
-\fontsize{10.5}{13.6}\selectfont
+\fontsize{10.5}{13.2}\selectfont
 \noindent\begin{minipage}[c]{0.83\textwidth}
   \name{李昕潼}
   \basicInfo{\phone{18543740228}\quad\textperiodcentered\quad\email{xintong.li@u.nus.edu}}
@@ -46,8 +46,8 @@
 \begin{minipage}[c]{0.14\textwidth}
   \raggedleft
   \IfFileExists{assets/resume_photo.png}{%
-    \includegraphics[width=1.85cm]{assets/resume_photo.png}%
-  }{\rule{0pt}{2.46cm}}
+    \includegraphics[width=1.65cm]{assets/resume_photo.png}%
+  }{\rule{0pt}{2.20cm}}
 \end{minipage}\par
 \section{\faGraduationCap\ 教育背景}
 \datedsubsection{新加坡国立大学\quad 计算机硕士（MComp）}{2026/08 -- 至今}
@@ -56,12 +56,12 @@
 \section{\faUsers\ 实习经历}
 \datedsubsection{快手\quad AI Agent 开发工程师}{2026/05 -- 2026/07}
 \tech{TypeScript / LangGraph / OpenCode / Tool Calling / Multi-Agent / React / Node.js}
-参与 \textbf{Code Agent、Design Agent 与 Prototype Agent 多 Agent 系统}研发，优化设计理解、代码生成与交互原型链路；通过 Figma 原生 API 支持 Design Agent 执行设计操作。
+参与 \textbf{Code Agent、Design Agent 与 Prototype Agent 多智能体系统研发}，面向界面开发场景优化设计理解、代码生成与交互原型构建链路，构建代码生成、执行反馈与迭代修复闭环，探索 LLM 在工程代码生成中的应用。
 \begin{itemize}
-  \item \textbf{优化设计信息表示与上下文构建}：针对 Figma 节点树逐层展开的生成效果不佳问题，改为预解析节点树，将布局、组件与样式组织为结构化上下文输入 Code Agent，改善设计理解与代码生成效果。
-  \item \textbf{设计沙盒支持的多页面生成流程}：在沙盒中持久化页面级结构化上下文，按需读取并分解长上下文生成任务；先生成单页面代码，再补充路由、跨页面交互及动效逻辑，实现可运行交互原型。
-  \item \textbf{优化 Design-to-Code 工具链}：基于 OpenCode 串联设计解析、上下文构造、代码生成与工程写入，结合 SVG/PNG 资源 CDN 化处理支持 RN、KRN、Vue，通过 Tool Calling 自动创建工程文件并写入代码。
-  \item \textbf{分析生成失败案例并调试视觉还原问题}：定位按钮尺寸异常、字体缺失导致的文本宽度与布局偏差，开展生成代码和样式调试，改进设计稿到前端页面的还原效果。
+  \item \textbf{优化面向代码生成的设计上下文表示}：针对节点树逐层展开及多页面长上下文场景下生成效果不佳的问题，设计结构化上下文解析方案，将 Figma 节点中的布局、组件、样式与设计资源组织为结构化输入，改善模型对设计信息的理解与代码生成效果。
+  \item \textbf{设计沙盒支持的任务规划与分阶段生成流程}：基于 LangGraph 组织多页面任务规划，在沙盒中持久化页面级结构化上下文，按需读取并拆解生成任务；先生成单页面代码，再补充跨页面联动、交互与动效逻辑，并通过执行结果与报错反馈驱动 Agent 修正代码，形成“生成—执行—反馈—修复”的迭代闭环。
+  \item \textbf{优化 Design-to-Code 工具链与工具调用流程}：基于 OpenCode 串联设计解析、上下文构造、代码生成与工程写入，结合 SVG/PNG 资源 CDN 化处理，通过 Tool Calling 自动创建工程文件并写入代码，支持 RN、KRN、Vue 多前端技术栈；通过 Figma API 支持 Design Agent 执行设计操作。
+  \item \textbf{开展生成质量问题排查与链路调优}：分析生成结果中的组件尺寸异常、字体缺失及布局偏差等问题，结合设计稿与生成页面定位原因，调试生成代码和样式，并据此优化生成链路，改善页面视觉还原与交互表现。
 \end{itemize}
 \section{\faCode\ 项目经历}
 \datedsubsection{基于大模型智能体的网络故障根因定位系统}{2025/12 -- 2026/03}
