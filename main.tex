@@ -23,7 +23,7 @@
 \setCJKsansfont[BoldFont=FandolHei-Bold.otf]{FandolHei-Regular.otf}
 % billryan/resume section and dated-subsection layout, tuned for one page.
 \titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{5pt}
+\titlespacing*{\section}{0pt}{6pt}{4pt}
 \titleformat{\subsection}{\normalsize\raggedright}{}{0em}{}
 \titlespacing*{\subsection}{0pt}{3pt}{1pt}
 \newcommand{\datedsubsection}[2]{\subsection{\textbf{#1}\hfill\normalfont\small #2}}
@@ -33,12 +33,12 @@
 \newcommand{\basicInfo}[1]{\centerline{\sffamily\fontsize{10.5}{13}\selectfont #1}}
 \newcommand{\tech}[1]{{\fontsize{9.3}{12}\selectfont\itshape #1\par}\vspace{1pt}}
 \setlist[itemize]{label=\textbullet,leftmargin=1.25em,labelsep=0.45em,
-  itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+  itemsep=1.5pt,topsep=2pt,parsep=0pt,partopsep=0pt}
 \newcount\cvpages
 \AtBeginShipout{\global\advance\cvpages by 1
   \ifnum\cvpages>1\PackageError{cv}{Resume exceeds one page}{Shorten the content or adjust spacing.}\fi}
 \begin{document}
-\fontsize{10.5}{14.2}\selectfont
+\fontsize{10.5}{13.6}\selectfont
 \noindent\begin{minipage}[c]{0.83\textwidth}
   \name{李昕潼}
   \basicInfo{\phone{18543740228}\quad\textperiodcentered\quad\email{xintong.li@u.nus.edu}}
@@ -56,11 +56,12 @@
 \section{\faUsers\ 实习经历}
 \datedsubsection{快手\quad AI Agent 开发工程师}{2026/05 -- 2026/07}
 \tech{TypeScript / LangGraph / OpenCode / Tool Calling / Multi-Agent / React / Node.js}
-参与 Code、Design 与 Prototype Agent 研发，将 Figma 设计稿自动转换为跨端代码与交互原型。
+参与 \textbf{Code Agent、Design Agent 与 Prototype Agent 多 Agent 系统}研发，优化设计理解、代码生成与交互原型链路；通过 Figma 原生 API 支持 Design Agent 执行设计操作。
 \begin{itemize}
-  \item \textbf{独立开发 Figma-to-Prototype 流程}：解析节点树，将布局、组件与样式转为结构化上下文，结合 Agent 推理生成可运行前端原型。
-  \item \textbf{优化 Design-to-Code 链路}：基于 OpenCode 串联设计理解、代码生成与工程写入，结合 SVG/PNG 资源 CDN 化处理，支持 RN、KRN、Vue；通过工具调用自动创建文件并写入代码。
-  \item \textbf{扩展多页面与交互生成}：设计页面级上下文管理和跨页面交互建模，支持多设计稿联合生成；抽取跳转关系与交互配置，生成路由、页面切换及动效逻辑。
+  \item \textbf{优化设计信息表示与上下文构建}：针对 Figma 节点树逐层展开的生成效果不佳问题，改为预解析节点树，将布局、组件与样式组织为结构化上下文输入 Code Agent，改善设计理解与代码生成效果。
+  \item \textbf{设计沙盒支持的多页面生成流程}：在沙盒中持久化页面级结构化上下文，按需读取并分解长上下文生成任务；先生成单页面代码，再补充路由、跨页面交互及动效逻辑，实现可运行交互原型。
+  \item \textbf{优化 Design-to-Code 工具链}：基于 OpenCode 串联设计解析、上下文构造、代码生成与工程写入，结合 SVG/PNG 资源 CDN 化处理支持 RN、KRN、Vue，通过 Tool Calling 自动创建工程文件并写入代码。
+  \item \textbf{分析生成失败案例并调试视觉还原问题}：定位按钮尺寸异常、字体缺失导致的文本宽度与布局偏差，开展生成代码和样式调试，改进设计稿到前端页面的还原效果。
 \end{itemize}
 \section{\faCode\ 项目经历}
 \datedsubsection{基于大模型智能体的网络故障根因定位系统}{2025/12 -- 2026/03}
