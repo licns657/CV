@@ -2,6 +2,12 @@
 
 该仓库用于通过 GitHub 与 Overleaf 同步维护简历。
 
+当前为一页中文版，排版改编自 [billryan/resume](https://github.com/billryan/resume)。
+保留其黑白分节、FontAwesome 图标、姓名与联系方式居中、经历日期右对齐的样式，
+并针对中文及一页长度调整字体、间距与照片布局。
+模板宏内嵌于 `main.tex`，方便单文件编辑器编译；无需外部 `resume.cls`。
+原模板许可证见 `TEMPLATE-LICENSE`，其许可范围不涉及个人简历正文与证件照。
+
 ## Overleaf 使用方法
 
 1. 在 Overleaf 中选择 **New Project → Import from GitHub**。
@@ -16,4 +22,5 @@
 - `.latexmkrc`：默认使用 XeLaTeX 的编译配置。
 
 模板仅使用 Overleaf/TeX Live 中的常见宏包，并采用 Fandol 中文字体，避免依赖本机字体。
+英文字体使用 TeX Gyre Termes，联系方式使用 TeX Gyre Heros；无需 Adobe 字体。
 Overleaf 无需另行安装中文字体或宏包；项目设置中的编译器请选择 XeLaTeX。
