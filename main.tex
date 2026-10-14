@@ -65,21 +65,26 @@
 \section{\faCode\ 项目经历}
 \datedsubsection{基于大模型智能体的网络故障根因定位系统}{2025/12 -- 2026/03}
 \tech{Python / Qwen2.5-7B-Instruct / PEFT / LoRA / GRPO / LangChain / ReAct / RAG}
+面向网络运维故障定位，结合结构化指标、知识检索与多步推理，实现从观测信息到候选根因的自动化诊断。
 \begin{itemize}
-  \item \textbf{构建 2,400 条 SFT 样本}：基于 TeleLogs 设计两阶段蒸馏流程，以排除、矛盾、规则和统计策略生成推理轨迹，再由教师模型整合、压缩与标准化。
-  \item \textbf{模型训练与 Agent 诊断}：使用 PEFT/LoRA 微调 Qwen2.5-7B-Instruct，结合 GRPO 优化根因判别；基于 LangChain/ReAct 封装表格解析、故障区间、小区几何及干扰分析工具，结合规则知识库与 RAG 完成多步诊断。
+  \item \textbf{设计两阶段蒸馏式 SFT 数据流程}：基于 TeleLogs，围绕工程参数、用户观测指标、症状描述与候选根因构建 \textbf{2,400 条样本}；先以排除、矛盾、规则、统计四类专家策略生成推理轨迹，再由教师模型整合、压缩与标准化正确轨迹，形成高质量 RCA 训练数据。
+  \item \textbf{开展参数高效训练与策略优化}：使用 PEFT/LoRA 对 Qwen2.5-7B-Instruct 进行监督微调，进一步结合 GRPO 优化最终根因判别，提升复杂故障场景下的输出稳定性与决策准确率。
+  \item \textbf{构建 ReAct 诊断智能体}：基于 LangChain 封装表格解析、故障区间识别、服务小区几何及邻区干扰分析工具，将原始数据转为结构化诊断证据；结合规则知识库与 RAG 开展多步推理，增强诊断的可解释性。
   \item \textbf{实验结果}：Pass@1 由基础模型的 12.04\% 提升至微调后的 53.59\%，引入 Agent 后达到 \textbf{76.50\%}；Pass@4 对应由 12.50\% 提升至 54.86\% 和 \textbf{78.36\%}。
 \end{itemize}
 \vspace{3pt}
 \datedsubsection{CADDesigner：基于通用智能体的 CAD 模型设计系统}{2025/06 -- 2025/09}
 \tech{Python / LangChain / Claude Sonnet / CadQuery / PythonOCC / ReAct / Function Calling}
+面向非专业用户，实现文本或参考图片到 CAD 代码生成、模型构建、三视图渲染与迭代修复的完整闭环。
 \begin{itemize}
-  \item \textbf{设计文本/图像到 CAD 的生成闭环}：基于 LangChain 组织多步推理和工具调用，使用 Claude Sonnet 提取几何特征与约束，生成 CadQuery/PythonOCC 参数化建模代码。
-  \item \textbf{实现视觉反馈迭代修复}：在 sandbox 中执行代码、构建模型并渲染标准三视图，由 Agent 评估视觉一致性；存在偏差时修正或重新生成代码，持续优化模型。
+  \item \textbf{设计智能建模工作流}：基于 LangChain 组织需求解析、代码生成、模型构建、渲染、视觉评估与迭代修复，通过多步推理与工具调用持续优化生成结果。
+  \item \textbf{实现多模态理解与代码生成}：使用 Claude Sonnet 联合理解文本描述和参考图像，提取几何特征、结构关系及建模约束，生成 CadQuery/PythonOCC 参数化建模代码。
+  \item \textbf{构建视觉反馈迭代修复机制}：在 sandbox 中执行代码、构建 3D 模型并渲染标准三视图，将结果反馈给 Agent 评估视觉一致性；若与需求存在偏差，则修正或重新生成代码并进入下一轮闭环。
   \item \textbf{实验结果}：在 CAD-VGDrawing 上取得 IoU 0.2769、CD 0.1097、HD 0.4347，\textbf{有效模型生成成功率（SUC）100.0\%}。
 \end{itemize}
 \section{\faCogs\ 技能特长}
 \textbf{开发环境：}Linux、Shell、Git、Conda、远程 GPU 服务器。\par
 \textbf{模型训练：}LoRA/QLoRA、PEFT、GRPO；数据构建、领域微调与效果评测。\par
 \textbf{智能体开发：}LangGraph、LangChain、ReAct、Tool Calling、Multi-Agent、RAG。
+\par\textbf{游戏开发：}比较熟悉 Unity，具备游戏引擎使用经验。
 \end{document}
