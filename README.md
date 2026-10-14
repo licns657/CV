@@ -1,35 +1,19 @@
-# English CV - LaTeX
+# 李昕潼中文简历（LaTeX）
 
-A clean, ATS-friendly, one-page CV template intended for local editing and Overleaf.
+该仓库用于通过 GitHub 与 Overleaf 同步维护简历。
 
-## Edit
+## Overleaf 使用方法
 
-Open `main.tex` and replace every placeholder, especially:
+1. 在 Overleaf 中选择 **New Project → Import from GitHub**。
+2. 选择本仓库 `licns657/CV`。
+3. 将编译器设为 **XeLaTeX**，主文档设为 `main.tex`。
+4. 已关联本仓库的项目，需要使用 GitHub 同步中的 Pull 操作拉取更新，再重新编译。
 
-- name and contact details;
-- profile summary;
-- education and dates;
-- experience and quantified achievements;
-- projects, technical skills, and activities.
+## 文件
 
-Keep bullet points concise and begin each one with a strong action verb. Whenever possible,
-include a measurable result.
+- `main.tex`：中文简历正文。
+- `assets/resume_photo.png`：简历证件照。
+- `.latexmkrc`：默认使用 XeLaTeX 的编译配置。
 
-## Compile locally
-
-With a TeX distribution installed:
-
-```bash
-latexmk -pdf main.tex
-```
-
-Clean generated files with:
-
-```bash
-latexmk -c
-```
-
-## Use with Overleaf
-
-Import the GitHub repository into Overleaf and set `main.tex` as the main document. The
-template uses pdfLaTeX and only standard TeX Live packages.
+模板仅使用 Overleaf/TeX Live 中的常见宏包，并采用 Fandol 中文字体，避免依赖本机字体。
+Overleaf 无需另行安装中文字体或宏包；项目设置中的编译器请选择 XeLaTeX。
