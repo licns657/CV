@@ -56,26 +56,26 @@
 \datedsubsection{北京邮电大学　通信工程本科}{2022/09--2026/06}
 本科期间均分90.47，专业排名前5\%；获国家奖学金，获评北京市优秀毕业生。\par
 \section{\faUsers 实习经历}
-\datedsubsection{快手　AI Agent开发工程师（Code Agent方向）}{2026/05--2026/07}
+\datedsubsection{快手　AI Agent开发工程师（Code Agent）}{2026/05--2026/07}
 \tech{LangGraph / OpenCode / Context Engineering / Style Memory / Test-Time Scaling}
 参与面向设计稿到可交互应用的Code Agent研发，围绕结构化上下文、分层任务规划、设计风格记忆与推理时迭代优化，改进多页面代码生成流程与效果。\par
 \begin{itemize}
-\item \textbf{上下文工程（Context Engineering）：}针对Figma节点逐层展开与多页面长上下文下生成效果不佳的问题，将布局、组件、样式及设计资源组织为页面级结构化表示，结合任务工作区按需加载，优化模型的设计理解与生成上下文。
-\item \textbf{分层任务规划（Hierarchical Planning）：}基于LangGraph将复杂任务拆解为单页面实现、跨页面联动与交互动效补全等阶段，持久化页面上下文与生成产物，支持阶段间信息复用及多页面任务的连续推进。
-\item \textbf{面向自进化的风格记忆（Style Memory）：}保存并复用设计师的设计风格信息，将历史偏好作为后续任务的生成条件，与当前设计上下文共同指导代码生成，支持跨任务偏好积累与个性化风格一致性。
-\item \textbf{推理时优化（Test-Time Scaling）：}基于OpenCode串联代码生成、执行反馈与多轮修复，利用运行报错指导后续代码修正；分析尺寸异常、字体缺失和布局偏差等失败案例，迭代上下文组织与生成策略。
+\item \textbf{上下文工程：}针对Figma节点逐层展开与多页面长上下文下生成效果不佳的问题，将布局、组件、样式及设计资源组织为页面级结构化表示，结合任务工作区按需加载，优化模型的设计理解与生成上下文。
+\item \textbf{分层任务规划：}基于LangGraph将复杂任务拆解为单页面实现、跨页面联动与交互动效补全等阶段，持久化页面上下文与生成产物，支持阶段间信息复用及多页面任务的连续推进。
+\item \textbf{面向自进化的风格记忆：}保存并复用设计师的设计风格信息，将历史偏好作为后续任务的生成条件，与当前设计上下文共同指导代码生成，支持跨任务偏好积累与个性化风格一致性。
+\item \textbf{推理时优化：}基于OpenCode串联代码生成、执行反馈与多轮修复，利用运行报错指导后续代码修正；分析尺寸异常、字体缺失和布局偏差等失败案例，迭代上下文组织与生成策略。
 \end{itemize}
 \section{\faCode 项目经历}
-\datedsubsection{基于Agent TARS的网页交互质量评测｜合作项目}{2026/10--至今}
+\datedsubsection{基于Agent TARS的网页交互质量评测}{2026/03--2026/05}
 \tech{Python / Agent TARS / Playwright / VLM / Flask / GUI Automation}
-参与Cookie-Bench合作项目，面向大模型生成网页的功能正确性与视觉质量，构建无需参考实现的自动评测流程，覆盖11个领域、54类场景与1,000条需求。\par
+面向大模型生成网页的功能正确性与视觉质量，构建无需参考实现的自动评测流程，覆盖11个领域、54类场景与1,000条需求。\par
 \begin{itemize}
 \item \textbf{自主交互评测：}基于Agent TARS串联视觉观察、任务规划与浏览器操作，围绕用户需求自主探索页面功能，形成静态感知、Agent交互与动态评分的三阶段评测流程。
 \item \textbf{多模态证据与缺陷归因：}融合连续录屏、逐步截图、音频及运行日志，在完整证据采集后统一评分，识别静态截图难以发现的状态更新、交互逻辑与动态效果缺陷，输出功能与美观双维评价。
 \item \textbf{项目结果：}完成13个大模型在React与HTML两种生成模式下的评测；在132条需求、528个人工标注实例上，总体成对偏好一致率达61.6\%，较无视频与逐步即时评分方案分别提升4.9和21.0个百分点。
 \end{itemize}
 
-\datedsubsection{MiniOneRec：生成式推荐系统｜项目负责人}{2026/08--2026/10}
+\datedsubsection{MiniOneRec：生成式推荐系统}{2026/08--2026/10}
 \tech{Python / Sentence-BERT / RQ-VAE / Qwen2.5 / SFT / GRPO / DeepSpeed ZeRO-2}
 面向传统推荐系统依赖ID嵌入、难以迁移语义知识的问题，构建端到端生成式推荐框架，将商品语义压缩为离散语义ID，通过大语言模型完成序列生成与偏好对齐。\par
 \begin{itemize}
