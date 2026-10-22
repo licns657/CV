@@ -29,9 +29,10 @@ Overleaf 无需另行安装中文字体或宏包；项目设置中的编译器�
 
 - `main.tex`：原版简历，保留原有内容与排版。
 - `cv_codeagent_minionerec.tex`：Code Agent 算法方向与 MiniOneRec 生成式推荐项目版本（2026-10-22）。
+- `cv_codeagent_cookiebench.tex`：Code Agent 与 Cookie-Bench 网页交互质量评测版本（2026-10-22）；Cookie-Bench 标为复现进行中。
 
-两个文件都是可以独立编译的完整简历，共用 `assets/resume_photo.png`。更新任一版本时，编辑对应文件即可。
+三个文件都是可以独立编译的完整简历，共用 `assets/resume_photo.png`。更新任一版本时，编辑对应文件即可。
 
-在已关联本仓库的 Overleaf 项目中，使用 GitHub 同步的 Pull 拉取更新，然后在项目设置的 **Main document（主文档）** 中选择要使用的 `.tex` 文件，编译器使用 **XeLaTeX**。切换主文档不会删除另一个版本。
+在已关联本仓库的 Overleaf 项目中，使用 GitHub 同步的 Pull 拉取更新，然后在项目设置的 **Main document（主文档）** 中选择要使用的 `.tex` 文件，编译器使用 **XeLaTeX**。切换主文档不会删除其他版本。
 
-两个文件用于并行维护；Git 提交记录或 Overleaf History 标签用于回溯每个版本的修改。
+三个文件用于并行维护；Git 提交记录或 Overleaf History 标签用于回溯每个版本的修改。
