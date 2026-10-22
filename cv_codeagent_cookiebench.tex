@@ -66,13 +66,13 @@
 \item \textbf{推理时优化（Test-Time Scaling）：}基于OpenCode串联代码生成、执行反馈与多轮修复，利用运行报错指导后续代码修正；分析尺寸异常、字体缺失和布局偏差等失败案例，迭代上下文组织与生成策略。
 \end{itemize}
 \section{\faCode 项目经历}
-\datedsubsection{基于Cookie-Bench的网页交互质量评测｜复现进行中}{2026/10--至今}
+\datedsubsection{基于Agent TARS的网页交互质量评测｜合作项目}{2026/10--至今}
 \tech{Python / Agent TARS / Playwright / VLM / Flask / GUI Automation}
-基于开源Cookie-Bench开展网页交互评测复现，面向界面可展示但功能未必正确的问题，准备视觉观察、浏览器操作与证据评估流程。\par
+参与Cookie-Bench合作项目，面向大模型生成网页的功能正确性与视觉质量，构建无需参考实现的自动评测流程，覆盖11个领域、54类场景与1,000条需求。\par
 \begin{itemize}
-\item \textbf{对照用例与测试工具：}构建待办应用正常版、删除失效版与刷新丢数据版，提供统一需求、批量请求和结果归档脚本，支持已知缺陷的对照测试。
-\item \textbf{执行链路复现（进行中）：}围绕Agent TARS本地服务、Chrome CDP及视觉评测模型配置复现环境，区分静态评估与交互证据评估，并整理启动与排障流程。
-\item \textbf{评测方案：}设置static、agent\_tars与interactive\_video对照，按缺陷检出、误报、证据覆盖及耗时评估；端到端实验结果待验证。
+\item \textbf{自主交互评测：}基于Agent TARS串联视觉观察、任务规划与浏览器操作，围绕用户需求自主探索页面功能，形成静态感知、Agent交互与动态评分的三阶段评测流程。
+\item \textbf{多模态证据与缺陷归因：}融合连续录屏、逐步截图、音频及运行日志，在完整证据采集后统一评分，识别静态截图难以发现的状态更新、交互逻辑与动态效果缺陷，输出功能与美观双维评价。
+\item \textbf{项目结果：}完成13个大模型在React与HTML两种生成模式下的评测；在132条需求、528个人工标注实例上，总体成对偏好一致率达61.6\%，较无视频与逐步即时评分方案分别提升4.9和21.0个百分点。
 \end{itemize}
 
 \datedsubsection{MiniOneRec：生成式推荐系统｜项目负责人}{2026/08--2026/10}

@@ -29,7 +29,7 @@ Overleaf 无需另行安装中文字体或宏包；项目设置中的编译器�
 
 - `main.tex`：原版简历，保留原有内容与排版。
 - `cv_codeagent_minionerec.tex`：Code Agent 算法方向与 MiniOneRec 生成式推荐项目版本（2026-10-22）。
-- `cv_codeagent_cookiebench.tex`：Code Agent 与 Cookie-Bench 网页交互质量评测版本（2026-10-22）；Cookie-Bench 标为复现进行中。
+- `cv_codeagent_cookiebench.tex`：Code Agent 与 Cookie-Bench 网页交互质量评测版本（2026-10-22）；项目标题为“基于Agent TARS的网页交互质量评测”，按合作项目展示已公开的评测结果。
 
 三个文件都是可以独立编译的完整简历，共用 `assets/resume_photo.png`。更新任一版本时，编辑对应文件即可。
 
