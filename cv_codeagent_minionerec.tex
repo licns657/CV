@@ -60,13 +60,13 @@
 \tech{LangGraph / OpenCode / Context Engineering / Style Memory / Test-Time Scaling}
 参与面向设计稿到可交互应用的Code Agent研发，围绕结构化上下文、分层任务规划、设计风格记忆与推理时迭代优化，改进多页面代码生成流程与效果。\par
 \begin{itemize}
-\item \textbf{上下文工程（Context Engineering）：}针对Figma节点逐层展开与多页面长上下文下生成效果不佳的问题，将布局、组件、样式及设计资源组织为页面级结构化表示，结合任务工作区按需加载，优化模型的设计理解与生成上下文。
-\item \textbf{分层任务规划（Hierarchical Planning）：}基于LangGraph将复杂任务拆解为单页面实现、跨页面联动与交互动效补全等阶段，持久化页面上下文与生成产物，支持阶段间信息复用及多页面任务的连续推进。
-\item \textbf{面向自进化的风格记忆（Style Memory）：}保存并复用设计师的设计风格信息，将历史偏好作为后续任务的生成条件，与当前设计上下文共同指导代码生成，支持跨任务偏好积累与个性化风格一致性。
-\item \textbf{推理时优化（Test-Time Scaling）：}基于OpenCode串联代码生成、执行反馈与多轮修复，利用运行报错指导后续代码修正；分析尺寸异常、字体缺失和布局偏差等失败案例，迭代上下文组织与生成策略。
+\item \textbf{上下文工程：}针对Figma节点逐层展开与多页面长上下文下生成效果不佳的问题，将布局、组件、样式及设计资源组织为页面级结构化表示，结合任务工作区按需加载，优化模型的设计理解与生成上下文。
+\item \textbf{分层任务规划：}基于LangGraph将复杂任务拆解为单页面实现、跨页面联动与交互动效补全等阶段，持久化页面上下文与生成产物，支持阶段间信息复用及多页面任务的连续推进。
+\item \textbf{面向自进化的风格记忆：}保存并复用设计师的设计风格信息，将历史偏好作为后续任务的生成条件，与当前设计上下文共同指导代码生成，支持跨任务偏好积累与个性化风格一致性。
+\item \textbf{推理时优化：}基于OpenCode串联代码生成、执行反馈与多轮修复，利用运行报错指导后续代码修正；分析尺寸异常、字体缺失和布局偏差等失败案例，迭代上下文组织与生成策略。
 \end{itemize}
 \section{\faCode 项目经历}
-\datedsubsection{MiniOneRec：生成式推荐系统｜项目负责人}{2026/08--2026/10}
+\datedsubsection{MiniOneRec：生成式推荐系统}{2026/03--2026/05}
 \tech{Python / Sentence-BERT / RQ-VAE / Qwen2.5 / SFT / GRPO / DeepSpeed ZeRO-2}
 面向传统推荐系统依赖ID嵌入、难以迁移语义知识的问题，构建端到端生成式推荐框架，将商品语义压缩为离散语义ID，通过大语言模型完成序列生成与偏好对齐。\par
 \begin{itemize}
